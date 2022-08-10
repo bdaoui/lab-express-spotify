@@ -1,12 +1,21 @@
 <h1>Album List</h1>
 
+<div class="gallery-container">
+        
     {{#each albumList}}
         {{#each this}}
-                
-            <h2>{{this.name}}</h2>
-
-                {{log "One Thing" this.name}}
-
+            <div class="gallery">
+                <h2>{{this.name}}</h2>
+                    {{#each this.images}}
+                        <img class="gallery-img" src="{{this.url}}" />
+                    {{/each}}
+            <a href="/tracks/{{this.id}}">
+            <button type="button"> Tracks </button>
+            
+            </a>
+            </div>
         {{/each}}
-
     {{/each}}
+
+</div>
+

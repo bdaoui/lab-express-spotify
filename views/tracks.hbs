@@ -1,0 +1,14 @@
+
+<div id="player">
+
+    {{#each playList}}
+    {{#each this}}
+
+        {{log this.this}}
+
+        <h2>{{this.name}}</h2>
+        <audio controls src="{{this.preview_url}}"></audio>
+    {{/each}}
+{{/each}}
+
+</div>

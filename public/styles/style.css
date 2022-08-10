@@ -30,6 +30,11 @@ form{
 
 }
 
+h1{
+    margin: 1% auto;
+    
+}
+
 form button{
     background-color: lightgreen;
 }
@@ -40,7 +45,7 @@ Hide Other images
 
 */
 
-#gallery-container{
+.gallery-container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
