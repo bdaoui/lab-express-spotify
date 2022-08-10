@@ -1,0 +1,57 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    
+}
+
+form {
+    
+    display: flex;
+    flex-direction: column;
+
+    width: 50%;
+
+    margin: 10% auto;
+
+    background-color: aqua;
+   
+}
+
+/*
+
+Hide Other images
+
+*/
+
+#gallery-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.gallery{
+    display: flex;
+    flex-direction: column;
+
+    width: 20vw;
+    height: 40vh;
+
+    margin: 5% auto;
+
+}
+
+
+.gallery-img:nth-child(3){
+    display:none;
+} 
+
+.gallery-img:nth-child(4){
+    display:none;
+} 
+
+
+.gallery-img:last-child{
+    display:none;
+} 
