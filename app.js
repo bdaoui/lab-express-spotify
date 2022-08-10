@@ -40,7 +40,7 @@ app.get("/artist-search", (req, res) =>{
 
     // console.log('The received data from the API: ', data.body.artists);
     // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-    const image = items[0].images[0].url;
+    // const image = items[0].images[0].url;
 
     res.render("artist-search-result" ,{items});})
 
@@ -49,6 +49,28 @@ app.get("/artist-search", (req, res) =>{
 }
 )
 
+app.get("/album/:artistId", (req, res) => {
+    const {artistId} = req.params;
+    // console.log(artistId);
+    
+    spotifyApi
+    .getArtistAlbums(artistId)
+    .then( data => {
+
+        const albumList = data.body;
+
+        res.render("album", {albumList}); 
+        // console.log(albumList);
+        
+    },
+
+
+        
+    function(err) {
+          console.error(err);
+        }
+      );
+})
 
 
 

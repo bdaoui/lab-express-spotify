@@ -64,7 +64,10 @@ Hide Other images
 
 .gallery button{
     background-color: rgb(75, 197, 92);
+    width: 100%;
+
 }
+
 
 .gallery img{
     width: 20vw;

@@ -1,0 +1,12 @@
+<h1>Album List</h1>
+
+    {{#each albumList}}
+        {{#each this}}
+                
+            <h2>{{this.name}}</h2>
+
+                {{log "One Thing" this.name}}
+
+        {{/each}}
+
+    {{/each}}
