@@ -2,13 +2,15 @@
 <div id="player">
 
     {{#each playList}}
-    {{#each this}}
+        {{#each this}}
 
-        {{log this.this}}
-
-        <h2>{{this.name}}</h2>
-        <audio controls src="{{this.preview_url}}"></audio>
+            {{log this.this}}
+                <div class="player-line">
+                    <h2>{{this.name}}</h2>
+                    <audio controls src="{{this.preview_url}}"></audio>
+                </div>
+            
+        {{/each}}
     {{/each}}
-{{/each}}
 
 </div>
