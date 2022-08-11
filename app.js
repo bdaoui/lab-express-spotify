@@ -4,12 +4,17 @@ const express = require('express');
 const hbs = require('hbs');
 const SpotifyWebApi = require('spotify-web-api-node'); // require spotify-web-api-node package here
 const PORT = 3000;
+const path = require("path");
 
 const app = express();
 
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
+
+
+// Add partial folder
+hbs.registerPartials(path.join(__dirname, "/views/partials"));
 
 // setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
@@ -90,7 +95,6 @@ app.get("/tracks/:trackId", (req, res) =>{
 
 
         res.render("tracks", {playList})
-        // console.log(data.body);
     
     }, 
     
